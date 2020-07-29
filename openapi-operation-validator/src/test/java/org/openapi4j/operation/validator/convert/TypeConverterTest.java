@@ -188,7 +188,7 @@ public class TypeConverterTest {
   public void convertPrimitiveNullNode() {
     // no schema
     assertEquals(
-      JsonNodeFactory.instance.nullNode(),
+      JsonNodeFactory.instance.textNode("[]"),
       TypeConverter.instance().convertPrimitive(null, null, new ArrayList<>()));
 
     Schema schema = new Schema();

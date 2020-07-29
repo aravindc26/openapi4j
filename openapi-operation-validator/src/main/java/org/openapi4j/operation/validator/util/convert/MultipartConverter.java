@@ -138,7 +138,7 @@ class MultipartConverter {
                                      final String encoding) throws IOException {
     
     if (schema == null) {
-      return JsonNodeFactory.instance.nullNode();
+      return TypeConverter.instance().convertPrimitive(context, null, IOUtil.toString(item.openStream(), encoding));
     }
 
     switch (schema.getSupposedType(context)) {
